@@ -1,18 +1,65 @@
 :root {
   --primary-color: #4d5ae5;
 }
-/* -----------------------------components----------------------------- */
 
-body,
-header {
-  font-family: 'Roboto', sans-serif;
+/* * {
+  box-sizing: border-box;
+} */
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
+header {
+  border-bottom: 1.5px solid #e7e9fc;
+}
+/* -----------------------------reset stylesheet----------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+/* -----------------------------components----------------------------- */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 .main-title {
@@ -23,6 +70,7 @@ header {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 
 .secondary-title {
@@ -31,6 +79,7 @@ header {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .secondary-text {
@@ -52,8 +101,6 @@ header {
   color: var(--primary-color);
 }
 
-.header {
-}
 .logo-web {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -65,7 +112,7 @@ header {
   text-transform: uppercase;
   color: var(--primary-color);
 }
-.logo-studio {
+.logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -75,6 +122,7 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #2e2f42;
+  margin-right: 76px;
 }
 
 .nav {
@@ -94,12 +142,48 @@ header {
   color: #434455;
 }
 
+/* position */
+.page-header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.adress-page {
+  display: flex;
+  align-items: center;
+}
+
+.adress-nav {
+  margin-left: auto;
+}
+
+.adress-item:not(:last-child) {
+  margin-right: 40px;
+}
 /* ------------------------------hero------------------------------ */
 
 .hero {
   background: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
-.hero-h {
+.hero-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1;
@@ -107,6 +191,9 @@ header {
   letter-spacing: 0.02em;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -121,17 +208,86 @@ header {
   letter-spacing: 0.04em;
   color: #ffffff;
   background: var(--primary-color);
-  cursor: pointer;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
 }
 
-/* ------------------------------advantages------------------------------ */
+.features-section {
+  padding-top: 120px;
+}
+/* ------------------------------features------------------------------ */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.feature-card {
+  max-width: 264px;
+}
+/* .feature-card:not(:nth-child(4n)) {
+  margin-right: 24px;
+}
+
+.feature-card:not(:nth-last-child(-n+4)) {
+  margin-bottom: 24px; 
+} */
 
 /* ------------------------------What are we doing------------------------------*/
-
+.we-doing-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
 /* ------------------------------our team------------------------------ */
+.our-team-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.team-section {
+  background: #F4F4FD;
+}
 
+.team-text {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
 /* ------------------------------footer------------------------------ */
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #2e2f42;
+}
+.logo-footer {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #2e2f42;
+  margin-right: 76px;
+  padding-bottom: 16px;
+  color: #ffffff;
+}
 
+.text-footer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  max-width: 264px;
+}
 /* ==============================portfolio============================== */
 
 /* ------------------------------our works------------------------------ */
@@ -149,6 +305,7 @@ header {
   padding: 12px 24px;
   width: 116px;
   height: 48px;
+  color: #4D5AE5;
   background: #f4f4fd;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
@@ -156,6 +313,28 @@ header {
   order: 1;
   flex-grow: 0;
 }
+.works-lists {
+  margin-top: 96px;
+  margin-bottom: 72px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.works-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.works-section {
+  padding-bottom: 120px;
+}
 
+.card-text {
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+}
 /* ------------------------------works------------------------------ */
-
