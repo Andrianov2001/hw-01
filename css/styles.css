@@ -179,9 +179,15 @@ body {
 /* ------------------------------hero------------------------------ */
 
 .hero {
-  background: #2e2f42;
+  background-image: linear-gradient(#2e2f42b3, #2e2f42b3),
+    url('../images/hero/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
+  text-align: center;
 }
 .hero-title {
   font-weight: 700;
@@ -238,6 +244,17 @@ body {
   margin-bottom: 24px; 
 } */
 
+.feature-icon-container {
+  display: flex;
+  margin-bottom: 8px;
+  width: 264px;
+  height: 112px;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4fd;
+  border-radius: 4px;
+}
+
 /* ------------------------------What are we doing------------------------------*/
 .we-doing-lists {
   display: flex;
@@ -251,7 +268,7 @@ body {
   gap: 24px;
 }
 .team-section {
-  background: #F4F4FD;
+  background: #f4f4fd;
 }
 
 .team-text {
@@ -259,6 +276,54 @@ body {
   padding-bottom: 32px;
   text-align: center;
 }
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  gap: 24px;
+}
+
+.social-list-icon {
+  fill: #f4f4fd;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background-color: #4d5ae5;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: #404bbf;
+}
+
+/* ------------------------------customers------------------------------ */
+
+.customers-section {
+  
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-icon {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ------------------------------footer------------------------------ */
 .footer {
   padding-top: 100px;
@@ -305,7 +370,7 @@ body {
   padding: 12px 24px;
   width: 116px;
   height: 48px;
-  color: #4D5AE5;
+  color: #4d5ae5;
   background: #f4f4fd;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
