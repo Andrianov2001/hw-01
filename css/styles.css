@@ -12,9 +12,11 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
 header {
   border-bottom: 1.5px solid #e7e9fc;
 }
+
 /* -----------------------------reset stylesheet----------------------------- */
 
 h1,
@@ -89,6 +91,7 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
 /* ------------------------------Header------------------------------ */
 
 .nav:hover,
@@ -112,6 +115,7 @@ body {
   text-transform: uppercase;
   color: var(--primary-color);
 }
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -160,9 +164,13 @@ body {
   align-items: center;
 }
 
-.menu-item:not(:last-child) {
-  margin-right: 40px;
+.menu .menu-item+.menu-item {
+  margin-left: 40px;
 }
+
+/* .menu-item:not(:last-child) {
+  margin-right: 40px;
+} */
 
 .adress-page {
   display: flex;
@@ -173,9 +181,13 @@ body {
   margin-left: auto;
 }
 
-.adress-item:not(:last-child) {
-  margin-right: 40px;
+.adress-page .adress-item+.adress-item {
+  margin-left: 40px;
 }
+
+/* .adress-item:not(:last-child) {
+  margin-right: 40px;
+} */
 /* ------------------------------hero------------------------------ */
 
 .hero {
@@ -189,6 +201,7 @@ body {
   padding-bottom: 188px;
   text-align: center;
 }
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -201,10 +214,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .button-hero:hover,
 .button-hero:focus {
   background: #404bbf;
 }
+
 .button-hero {
   font-weight: 500;
   font-size: 16px;
@@ -227,15 +242,54 @@ body {
 .features-section {
   padding-top: 120px;
 }
+
+.backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 408px;
+  height: 576px;
+
+
+  background: #FCFCFC;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-bg:hover,
+.modal-bg:focus {
+  opacity: 1;
+}
+
 /* ------------------------------features------------------------------ */
 .features-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .feature-card {
   max-width: 264px;
 }
+
 /* .feature-card:not(:nth-child(4n)) {
   margin-right: 24px;
 }
@@ -261,12 +315,14 @@ body {
   flex-wrap: wrap;
   gap: 24px;
 }
+
 /* ------------------------------our team------------------------------ */
 .our-team-lists {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .team-section {
   background: #f4f4fd;
 }
@@ -307,10 +363,6 @@ body {
 
 /* ------------------------------customers------------------------------ */
 
-.customers-section {
-  
-}
-
 .customers-list {
   display: flex;
   justify-content: center;
@@ -318,18 +370,36 @@ body {
 }
 
 .customers-icon {
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
   justify-content: center;
   align-items: center;
 }
 
+.group {
+  display: flex;
+  fill: #8E8F99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+}
+
+.group:hover,
+.group:focus {
+  border-color: #404bbf;
+  fill: #404bbf;
+}
+
 /* ------------------------------footer------------------------------ */
 .footer {
+  display: flex;
+  align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
   background: #2e2f42;
 }
+
 .logo-footer {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -345,6 +415,10 @@ body {
   color: #ffffff;
 }
 
+.footer-item {
+  display: flex;
+}
+
 .text-footer {
   font-weight: 400;
   font-size: 16px;
@@ -353,6 +427,55 @@ body {
   color: #ffffff;
   max-width: 264px;
 }
+
+/* footer media */
+
+.footer-media {
+  margin-left: 120px;
+}
+
+.footer-title {
+  color: #ffffff;
+}
+
+.media-item {
+  gap: 16px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/*------------------------------ modal ------------------------------*/
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ebecf0;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 0;
+}
+
+.modal-close-btn-icon {
+  height: 8px;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  border-color: #404bbf;
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: #404bbf;
+}
+
 /* ==============================portfolio============================== */
 
 /* ------------------------------our works------------------------------ */
@@ -378,6 +501,7 @@ body {
   order: 1;
   flex-grow: 0;
 }
+
 .works-lists {
   margin-top: 96px;
   margin-bottom: 72px;
@@ -385,11 +509,13 @@ body {
   gap: 24px;
   justify-content: center;
 }
+
 .works-card {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .works-section {
   padding-bottom: 120px;
 }
@@ -402,4 +528,58 @@ body {
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
 }
+
+.card-text {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.works-card-link:hover,
+.works-card-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.works-card-link {
+  display: block;
+}
+
+.works-card-link:hover .overlay,
+.works-card-link:focus .overlay {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.list-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay::-webkit-scrollbar {
+  width: 0;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  transform: translate(0, 100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #F4F4FD;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  background: #4D5AE5;
+  background-blend-mode: soft-light;
+  mix-blend-mode: normal;
+}
+
 /* ------------------------------works------------------------------ */
